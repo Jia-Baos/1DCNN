@@ -5,53 +5,31 @@ from torch.utils.data import Dataset, DataLoader
 
 
 # 此文件负责封装DataSet，便于数据按bath的方式读取
-# dataset_dir结构
-"""
-    dataset_dir
-    ----Images
-    --------000000.txt
-    ------------标量1
-    ------------标量2
-                ~
-    ------------标量200
-    --------000001.txt
-                ~
-    ----ImageSets
-    --------val.txt
-    --------text.txt
-    --------train.txt
-                ~
-    ----Labels
-    --------000000.txt
-    ------------1 0
-                or
-    ------------0 1
-    --------000001.txt
-                ~
-"""
-
-
 class MyDataSet(Dataset):
     """
-    dataset_dir
-    ----Annotations
-    --------000000.xml
-    --------000001.xml
-                ~
-    ----Images
-    --------000000.jpg
-    --------000001.jpg
-                ~
-    ----ImageSets
-    --------val.txt
-    --------text.txt
-    --------train.txt
-                ~
-    ----Labels
-    --------000000.txt
-    --------000001.txt
-                ~
+        dataset_dir
+        ----Images
+        --------000000.txt
+        ------------标量1
+        ------------标量2
+                    ~
+        ------------标量200
+        --------000001.txt
+                    ~
+        ----ImageSets
+        --------val.txt
+        --------text.txt
+        --------train.txt
+                    ~
+        ----Labels
+        --------000000.txt
+        ------------1 0
+                    or
+        ------------0 1
+        --------000001.txt
+                    ~
     """
+
     def __init__(self, dataset_dir, mode="train", trans=None):
         self.data_dir = dataset_dir
         self.image_dir = os.path.join(dataset_dir, "Images")
