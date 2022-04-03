@@ -8,6 +8,7 @@ from torch.utils.data import DataLoader
 import os
 import time
 import datetime
+from visdom import Visdom
 
 data_dir = 'D:\\PythonProject\\1DCNN\\data'
 checkpoints_dir = "D:\\PythonProject\\1DCNN\\checkpoints"
@@ -25,7 +26,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # 调用MyNet模型，将模型数据转到GPU
 model = JiaNet().to(device)
-# model.load_state_dict(torch.load("D:\\PythonProject\\LeNet\\save_model\\2020-03-06.pkl"))
+model.load_state_dict(torch.load("D:\\PythonProject\\1DCNN\\checkpoints\\best_model.pt"))
 
 # 定义损失函数
 loss_func = nn.CrossEntropyLoss()
@@ -85,11 +86,17 @@ def val(dataloader, model, loss_func):
 # 开始训练
 if __name__ == '__main__':
 
-    epochs = 50
+    epochs = 100
     best_loss = 2.0
 
     if not os.path.exists(checkpoints_dir):
         os.mkdir(checkpoints_dir)
+
+    # 将窗口类实例化
+    # 在终端中按下Ctrl + C可以终止前端服务器
+    viz = Visdom()
+    # 创建窗口并初始化
+    viz.line([0.], [0], win='train_loss', opts=dict(title='train_loss'))
 
     for epoch in range(epochs):
         print("\nepoch: %d" % (epoch + 1))
@@ -114,6 +121,10 @@ if __name__ == '__main__':
         val_loss = val(val_dataloader, model, loss_func)
         t2 = time.time()
 
+        # 更新窗口图像
+        viz.line([val_loss], [epoch], win='train_loss', update='append')
+        time.sleep(0.5)
+
         print("Validation consumes %.2f second" % (t2 - t1))
         with open(os.path.join(checkpoints_dir, "log.txt"), "a+") as log_file:
             log_file.write("Validation consumes %.2f second\n\n" % (t2 - t1))
@@ -122,5 +133,5 @@ if __name__ == '__main__':
         if val_loss < best_loss:
             best_loss = val_loss
             print("save best model\n")
-            torch.save(model.state_dict(), 'checkpoints/best_model.pkl')
+            torch.save(model.state_dict(), 'checkpoints/best_model.pt')
     print("The train has done!!!")
