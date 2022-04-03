@@ -78,5 +78,6 @@ if __name__ == '__main__':
     # DataLoader要求输入图片大小一致
     dataloader = DataLoader(dataset, batch_size=3, shuffle=True, num_workers=0, drop_last=False)
     for batch, (x, y) in enumerate(dataloader):
+        print(batch)
         print(x)
         print(y)

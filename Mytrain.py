@@ -1,11 +1,10 @@
 # 此文件负责网络训练
 import torch
 from torch import nn
-from MyNet import JiaNet
+from MyNet import JiaNet, batch_value
 from MyDataSet import MyDataSet
 from torch.optim import lr_scheduler
 from torch.utils.data import DataLoader
-from torchvision import transforms
 import os
 import time
 import datetime
@@ -15,11 +14,11 @@ checkpoints_dir = "D:\\PythonProject\\1DCNN\\checkpoints"
 
 # 加载训练数据集
 dataset = MyDataSet(data_dir, mode='train')
-train_dataloader = DataLoader(dataset, batch_size=1, shuffle=True, num_workers=0, drop_last=False)
+train_dataloader = DataLoader(dataset, batch_size=batch_value, shuffle=True, num_workers=0, drop_last=False)
 
 # 加载测试数据集
 dataset = MyDataSet(data_dir, mode='val')
-val_dataloader = DataLoader(dataset, batch_size=1, shuffle=True, num_workers=0, drop_last=False)
+val_dataloader = DataLoader(dataset, batch_size=batch_value, shuffle=True, num_workers=0, drop_last=False)
 
 # 如果有显卡，可以转到GPU
 device = "cuda" if torch.cuda.is_available() else "cpu"

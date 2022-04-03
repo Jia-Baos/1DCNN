@@ -1,13 +1,14 @@
 import torch
 import torch.nn as nn
 
+batch_value = 1
 
 # 此文件负责网络的实现
 class JiaNet(nn.Module):
     def __init__(self):
         super(JiaNet, self).__init__()
 
-        self.c1 = nn.Conv1d(in_channels=1, out_channels=10, kernel_size=3, padding=2)
+        self.c1 = nn.Conv1d(in_channels=batch_value, out_channels=10, kernel_size=3, padding=2)
         self.s1 = nn.Sigmoid()
         self.c2 = nn.Conv1d(in_channels=10, out_channels=20, kernel_size=3, padding=2)
         self.s2 = nn.Sigmoid()
