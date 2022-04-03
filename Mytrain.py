@@ -1,7 +1,7 @@
 # 此文件负责网络训练
 import torch
 from torch import nn
-from MyNet import JiaNet, batch_value
+from MyNet import JiaNet
 from MyDataSet import MyDataSet
 from torch.optim import lr_scheduler
 from torch.utils.data import DataLoader
@@ -14,11 +14,11 @@ checkpoints_dir = "D:\\PythonProject\\1DCNN\\checkpoints"
 
 # 加载训练数据集
 dataset = MyDataSet(data_dir, mode='train')
-train_dataloader = DataLoader(dataset, batch_size=batch_value, shuffle=True, num_workers=0, drop_last=False)
+train_dataloader = DataLoader(dataset, batch_size=1, shuffle=True, num_workers=0, drop_last=False)
 
 # 加载测试数据集
 dataset = MyDataSet(data_dir, mode='val')
-val_dataloader = DataLoader(dataset, batch_size=batch_value, shuffle=True, num_workers=0, drop_last=False)
+val_dataloader = DataLoader(dataset, batch_size=1, shuffle=True, num_workers=0, drop_last=False)
 
 # 如果有显卡，可以转到GPU
 device = "cuda" if torch.cuda.is_available() else "cpu"
@@ -39,7 +39,7 @@ lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=10, gamma=0.1)
 
 # 定义训练函数
 def train(dataloader, model, loss_func, optimizer):
-    loss, current, n = 0.0, 0.0, 0
+    avg_loss = 0.0
     for batch, (x, y) in enumerate(dataloader):
         # 前向传播
         x, y = x.to(device), y.to(device)
@@ -48,49 +48,48 @@ def train(dataloader, model, loss_func, optimizer):
         print(output)
         print(y)
         cur_loss = loss_func(output, y)
+        avg_loss = (avg_loss * batch + cur_loss.item()) / (batch + 1)
         # pred = torch.argmax(output, dim=1)
 
         optimizer.zero_grad()
         cur_loss.backward()
         optimizer.step()
-        loss += cur_loss
-        n = n + 1
 
     log_file = open(os.path.join(checkpoints_dir, "log.txt"), "a+")
-    log_file.write("Epoch %d | loss = %.3f\n" % (epoch, cur_loss / n))
+    log_file.write("Epoch %d | avg_loss = %.3f\n" % (epoch, avg_loss))
     log_file.flush()
     log_file.close()
 
 
 def val(dataloader, model, loss_func):
     model.eval()
-    loss, current, n = 0.0, 0.0, 0
+    avg_loss = 0.0
     with torch.no_grad():
         for batch, (x, y) in enumerate(dataloader):
             # 前向传播
             x, y = x.to(device), y.to(device)
             output = model(x)
             output = output.unsqueeze(0)
-            print(output)
-            print(y)
             cur_loss = loss_func(output, y)
+            avg_loss = (avg_loss * batch + cur_loss.item()) / (batch + 1)
             # pred = torch.argmax(output, dim=1)
 
-            loss += cur_loss
-            n = n + 1
         log_file = open(os.path.join(checkpoints_dir, "log.txt"), "a+")
-        log_file.write("Epoch %d | loss = %.3f\n" % (epoch, cur_loss / n))
+        log_file.write("Epoch %d | avg_loss = %.3f\n" % (epoch, avg_loss))
         log_file.flush()
         log_file.close()
+
+    return avg_loss
 
 
 # 开始训练
 if __name__ == '__main__':
-    if not os.path.exists(checkpoints_dir):
-        os.mkdir(checkpoints_dir)
 
     epochs = 50
-    min_acc = 0
+    best_loss = 2.0
+
+    if not os.path.exists(checkpoints_dir):
+        os.mkdir(checkpoints_dir)
 
     for epoch in range(epochs):
         print("\nepoch: %d" % (epoch + 1))
@@ -112,7 +111,7 @@ if __name__ == '__main__':
         with open(os.path.join(checkpoints_dir, "log.txt"), "a+") as log_file:
             log_file.write("\n======================validate epoch %d======================\n" % (epoch + 1))
         t1 = time.time()
-        val(val_dataloader, model, loss_func)
+        val_loss = val(val_dataloader, model, loss_func)
         t2 = time.time()
 
         print("Validation consumes %.2f second" % (t2 - t1))
@@ -120,11 +119,8 @@ if __name__ == '__main__':
             log_file.write("Validation consumes %.2f second\n\n" % (t2 - t1))
 
         # 保存最好的模型权重
-        # if a > min_acc:
-        #     folder = 'save_model'
-        #     if not os.path.exists(folder):
-        #         os.mkdir('save_model')
-        #     min_acc = a
-        #     print("save best model\n")
-        #     torch.save(model.state_dict(), 'checkpoints/best_model.pkl')
-    print("Done!!!")
+        if val_loss < best_loss:
+            best_loss = val_loss
+            print("save best model\n")
+            torch.save(model.state_dict(), 'checkpoints/best_model.pkl')
+    print("The train has done!!!")
