@@ -67,8 +67,8 @@ class MyDataSet(Dataset):
         img = np.loadtxt(img_path)
         label_path = os.path.join(self.label_dir, self.img_list[item] + '.txt')
         label = np.loadtxt(label_path)
-        image = torch.tensor(img)
-        label = torch.tensor(label)
+        image = torch.tensor(img, dtype=torch.float)
+        label = torch.tensor(label, dtype=torch.float)
         return image, label
 
 
@@ -76,9 +76,7 @@ if __name__ == '__main__':
     data_dir = r'D:\PythonProject\1DCNN\data'
     dataset = MyDataSet(data_dir)
     # DataLoader要求输入图片大小一致
-    dataloader = DataLoader(dataset, batch_size=2, shuffle=True, num_workers=0, drop_last=False)
-    for data in dataloader:
-        imgs, labels = data
-        print(imgs.shape)
-        print(imgs[0])
-        print(labels)
+    dataloader = DataLoader(dataset, batch_size=3, shuffle=True, num_workers=0, drop_last=False)
+    for batch, (x, y) in enumerate(dataloader):
+        print(x)
+        print(y)

@@ -5,6 +5,7 @@ __pycache__/
 
 # files
 data/
+checkpoints/
 # C extensions
 *.so
 
