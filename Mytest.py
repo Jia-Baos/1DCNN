@@ -1,30 +1,34 @@
 import torch
-import numpy as np
+from MyNet import JiaNet
+from MyDataSet import MyDataSet
+from torch.utils.data import DataLoader
 
-data_dir = "D:\\PythonProject\\1DCNN\\data\\Images\\000000.txt"
-src = np.loadtxt(data_dir)
-print(src)
-print(src.shape)
-print(src[0])
-print(type(src[0]))
+# 映射表
+result_cls = ["Good", "Bad"]
+# 此文件负责网络测试
 
-t1 = torch.rand((1, 2))
-t2 = torch.rand(2)
-t1 = t1.unsqueeze(0)
-print(t1)
-print(t2)
+# 如果有显卡，可以转到GPU
+device = "cuda" if torch.cuda.is_available() else "cpu"
 
-from visdom import Visdom
-import time
-# 将窗口类实例化
-viz = Visdom()
-# 创建窗口并初始化
-viz.line([[0.,0.]], [0], win='train', opts=dict(title='loss&acc', legend=['loss', 'acc']))
-for global_steps in range(100):
-    # 随机获取loss和acc
-    loss = 0.1 * np.random.randn() + 1
-    acc = 0.1 * np.random.randn() + 0.5
-    # 更新窗口图像
-    viz.line([[loss, acc]], [global_steps], win='train', update='append')
-    # 延时0.5s
-    time.sleep(0.5)
+# 权重存放路径
+weight_path = "D:\\PythonProject\\1DCNN\\checkpoints\\best_model.pt"
+# 调用模型
+model = JiaNet().to(device)
+model.load_state_dict(torch.load(weight_path))
+
+if __name__ == '__main__':
+    # 数据存放路径
+    data_dir = 'D:\\PythonProject\\1DCNN\\data'
+    # 加载测试数据集
+    dataset = MyDataSet(data_dir, mode='test')
+    dataloader = DataLoader(dataset, batch_size=1, shuffle=True, num_workers=0, drop_last=False)
+
+    # 预测过程
+    model.eval()
+    with torch.no_grad():
+        for batch, (x, y) in enumerate(dataloader):
+            x, y = x.to(device), y.to(device)
+            output = model(x)
+            print(output)
+            cls_index = torch.argmax(output)
+            print(result_cls[cls_index])

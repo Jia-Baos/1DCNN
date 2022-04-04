@@ -10,14 +10,16 @@ import time
 import datetime
 from visdom import Visdom
 
+# 数据存放路径
 data_dir = 'D:\\PythonProject\\1DCNN\\data'
+# 权重存放路径
 checkpoints_dir = "D:\\PythonProject\\1DCNN\\checkpoints"
 
 # 加载训练数据集
 dataset = MyDataSet(data_dir, mode='train')
 train_dataloader = DataLoader(dataset, batch_size=1, shuffle=True, num_workers=0, drop_last=False)
 
-# 加载测试数据集
+# 加载验证数据集
 dataset = MyDataSet(data_dir, mode='val')
 val_dataloader = DataLoader(dataset, batch_size=1, shuffle=True, num_workers=0, drop_last=False)
 
