@@ -28,7 +28,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # 调用MyNet模型，将模型数据转到GPU
 model = ResNet18().to(device)
-# model.load_state_dict(torch.load("D:\\PythonProject\\1DCNN\\checkpoints\\best_model.pt"))
+# model.load_state_dict(torch.load("D:\\PythonProject\\1DCNN\\checkpoints\\best_model_old.pt"))
 
 # 定义损失函数
 loss_func = nn.CrossEntropyLoss()

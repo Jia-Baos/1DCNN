@@ -24,11 +24,20 @@ if __name__ == '__main__':
     dataloader = DataLoader(dataset, batch_size=1, shuffle=True, num_workers=0, drop_last=False)
 
     # 预测过程
+    data_right, data_full = 0, 0
     model.eval()
     with torch.no_grad():
         for batch, (x, y) in enumerate(dataloader):
             x, y = x.to(device), y.to(device)
             output = model(x)
-            print(output)
+            # print(output)
+            real_cls_index = torch.argmax(y)
             cls_index = torch.argmax(output)
+            print("***************************************")
+            print(result_cls[real_cls_index])
             print(result_cls[cls_index])
+            if real_cls_index == cls_index:
+                data_right += 1
+            data_full += 1
+
+    print("accur: ", data_right / data_full)

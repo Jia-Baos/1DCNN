@@ -113,5 +113,6 @@ if __name__ == '__main__':
     if not os.path.exists(imagesets_dir):
         os.makedirs(imagesets_dir)
 
+    # change_name(images_dir)
     # change_name(labels_txt_dir)
     divide_sets(labels_txt_dir, imagesets_dir)
