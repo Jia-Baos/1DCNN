@@ -1,5 +1,5 @@
 import torch
-from MyNet import JiaNet
+from MyNet import ResNet18
 from MyDataSet import MyDataSet
 from torch.utils.data import DataLoader
 
@@ -13,7 +13,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 # 权重存放路径
 weight_path = "D:\\PythonProject\\1DCNN\\checkpoints\\best_model.pt"
 # 调用模型
-model = JiaNet().to(device)
+model = ResNet18().to(device)
 model.load_state_dict(torch.load(weight_path))
 
 if __name__ == '__main__':

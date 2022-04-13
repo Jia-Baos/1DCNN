@@ -68,6 +68,8 @@ class MyDataSet(Dataset):
         label_path = os.path.join(self.label_dir, self.img_list[item] + '.txt')
         label = np.loadtxt(label_path)
         image = torch.tensor(img, dtype=torch.float)
+        image = image.unsqueeze(0)
+        # image = image.unsqueeze(0)
         label = torch.tensor(label, dtype=torch.float)
         return image, label
 
@@ -79,5 +81,5 @@ if __name__ == '__main__':
     dataloader = DataLoader(dataset, batch_size=3, shuffle=True, num_workers=0, drop_last=False)
     for batch, (x, y) in enumerate(dataloader):
         print(batch)
-        print(x)
-        print(y)
+        print(x.size())
+        print(y.size())

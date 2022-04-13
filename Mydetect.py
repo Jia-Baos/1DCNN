@@ -1,7 +1,7 @@
 import os
 import torch
 import numpy as np
-from MyNet import JiaNet
+from MyNet import ResNet18
 
 # 映射表
 result_cls = ["Good", "Bad"]
@@ -13,7 +13,7 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 # 权重存放路径
 weight_path = "D:\\PythonProject\\1DCNN\\checkpoints\\best_model.pt"
 # 调用模型
-model = JiaNet().to(device)
+model = ResNet18().to(device)
 model.load_state_dict(torch.load(weight_path))
 
 if __name__ == '__main__':
@@ -27,6 +27,7 @@ if __name__ == '__main__':
         img_path = os.path.join(data_dir, img_name)
         img = np.loadtxt(img_path)
         image = torch.tensor(img, dtype=torch.float)
+        image = image.unsqueeze(0)
         image = image.unsqueeze(0)
 
         model.eval()

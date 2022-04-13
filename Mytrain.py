@@ -1,7 +1,7 @@
 # 此文件负责网络训练
 import torch
 from torch import nn
-from MyNet import JiaNet
+from MyNet import ResNet18
 from MyDataSet import MyDataSet
 from torch.optim import lr_scheduler
 from torch.utils.data import DataLoader
@@ -17,18 +17,18 @@ checkpoints_dir = "D:\\PythonProject\\1DCNN\\checkpoints"
 
 # 加载训练数据集
 dataset = MyDataSet(data_dir, mode='train')
-train_dataloader = DataLoader(dataset, batch_size=1, shuffle=True, num_workers=0, drop_last=False)
+train_dataloader = DataLoader(dataset, batch_size=3, shuffle=True, num_workers=0, drop_last=False)
 
 # 加载验证数据集
 dataset = MyDataSet(data_dir, mode='val')
-val_dataloader = DataLoader(dataset, batch_size=1, shuffle=True, num_workers=0, drop_last=False)
+val_dataloader = DataLoader(dataset, batch_size=3, shuffle=True, num_workers=0, drop_last=False)
 
 # 如果有显卡，可以转到GPU
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # 调用MyNet模型，将模型数据转到GPU
-model = JiaNet().to(device)
-model.load_state_dict(torch.load("D:\\PythonProject\\1DCNN\\checkpoints\\best_model.pt"))
+model = ResNet18().to(device)
+# model.load_state_dict(torch.load("D:\\PythonProject\\1DCNN\\checkpoints\\best_model.pt"))
 
 # 定义损失函数
 loss_func = nn.CrossEntropyLoss()
@@ -47,7 +47,7 @@ def train(dataloader, model, loss_func, optimizer):
         # 前向传播
         x, y = x.to(device), y.to(device)
         output = model(x)
-        output = output.unsqueeze(0)
+        # output = output.unsqueeze(0)
         print(output)
         print(y)
         cur_loss = loss_func(output, y)
@@ -72,7 +72,7 @@ def val(dataloader, model, loss_func):
             # 前向传播
             x, y = x.to(device), y.to(device)
             output = model(x)
-            output = output.unsqueeze(0)
+            # output = output.unsqueeze(0)
             cur_loss = loss_func(output, y)
             avg_loss = (avg_loss * batch + cur_loss.item()) / (batch + 1)
             # pred = torch.argmax(output, dim=1)
