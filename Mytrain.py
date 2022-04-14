@@ -3,6 +3,7 @@ import torch
 from torch import nn
 from MyNet_ResNet import ResNet18
 from MyNet_SEResNet import SEResNet18
+from MyNet_DenseNet import Bottleneck, DenseNet
 from MyDataSet import MyDataSet
 from torch.optim import lr_scheduler
 from torch.utils.data import DataLoader
@@ -28,7 +29,10 @@ val_dataloader = DataLoader(dataset, batch_size=12, shuffle=True, num_workers=0,
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # 调用MyNet模型，将模型数据转到GPU
-model = SEResNet18().to(device)
+# model = ResNet18().to(device)
+# model = SEResNet18().to(device)
+model = DenseNet(Bottleneck, [6, 12, 24, 16], growth_rate=12,
+                    num_classes=2, pool_size=7).to(device)
 # model.load_state_dict(torch.load("D:\\PythonProject\\1DCNN\\checkpoints\\best_model_old.pt"))
 
 # 定义损失函数

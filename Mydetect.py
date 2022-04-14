@@ -2,6 +2,8 @@ import os
 import torch
 import numpy as np
 from MyNet_ResNet import ResNet18
+from MyNet_SEResNet import SEResNet18
+from MyNet_DenseNet import Bottleneck, DenseNet
 
 # 映射表
 result_cls = ["Good", "Bad"]
@@ -11,9 +13,11 @@ result_cls = ["Good", "Bad"]
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # 权重存放路径
-weight_path = "D:\\PythonProject\\1DCNN\\checkpoints\\best_model.pt"
+weight_path = "D:\\PythonProject\\1DCNN\\checkpoints\\best_model_SEResNet.pt"
 # 调用模型
-model = ResNet18().to(device)
+# model = ResNet18().to(device)
+model = SEResNet18().to(device)
+# model = DenseNet(Bottleneck, [6, 12, 24, 16], growth_rate=12, num_classes=2, pool_size=7).to(device)
 model.load_state_dict(torch.load(weight_path))
 
 if __name__ == '__main__':
@@ -22,6 +26,7 @@ if __name__ == '__main__':
 
     # 预测过程
     img_list = os.listdir(data_dir)
+    data_right, data_full = 0, 0
     for img_name in img_list:
         print(img_name)
         img_path = os.path.join(data_dir, img_name)
@@ -34,7 +39,11 @@ if __name__ == '__main__':
         with torch.no_grad():
             x = image.to(device)
             output = model(x)
-            print(output)
             cls_index = torch.argmax(output)
             print(result_cls[cls_index])
+            if cls_index == 1:
+                data_right +=1
+            data_full +=1
+    print("accur: ", data_right / data_full)
+
 
