@@ -42,8 +42,6 @@ if __name__ == '__main__':
             cls_index = torch.argmax(output)
             print(result_cls[cls_index])
             if cls_index == 1:
-                data_right +=1
-            data_full +=1
+                data_right += 1
+            data_full += 1
     print("accur: ", data_right / data_full)
-
-

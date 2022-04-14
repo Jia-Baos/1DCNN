@@ -20,13 +20,11 @@ model = SEResNet18().to(device)
 # model = DenseNet(Bottleneck, [6, 12, 24, 16], growth_rate=12, num_classes=2, pool_size=7).to(device)
 model.load_state_dict(torch.load(weight_path))
 
-
-
 if __name__ == '__main__':
     # 数据存放路径
     data_dir = 'D:\\PythonProject\\1DCNN\\data'
     # 加载测试数据集
-    dataset = MyDataSet(data_dir, mode='val')
+    dataset = MyDataSet(data_dir, mode='test')
     dataloader = DataLoader(dataset, batch_size=1, shuffle=True, num_workers=0, drop_last=False)
 
     # 预测过程

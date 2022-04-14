@@ -72,19 +72,21 @@ def divide_sets(labels_txt_dir, imagesets_dir):
     fval = open(os.path.join(imagesets_dir, 'val.txt'), 'w')
     ftest = open(os.path.join(imagesets_dir, 'test.txt'), 'w')
 
-    trainval_percent = 0.9
-    train_percent = 0.9
+    trainval_percent = 0.8
+    train_percent = 0.8
 
     total_xml = os.listdir(labels_txt_dir)
     xml_num = len(total_xml)
-    list = range(xml_num)
+    index_list = list(range(xml_num))
+    # shuffle原序列
+    random.shuffle(index_list)
     trainval_num = int(xml_num * trainval_percent)
     train_num = int(trainval_num * train_percent)
 
-    trainval = random.sample(list, trainval_num)
+    trainval = random.sample(index_list, trainval_num)
     train = random.sample(trainval, train_num)
 
-    for i in list:
+    for i in index_list:
         name = total_xml[i][:-4] + '\n'
         if i in trainval:
             if i in train:
