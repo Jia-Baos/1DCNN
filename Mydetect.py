@@ -1,7 +1,7 @@
 import os
 import torch
 import numpy as np
-from MyNet import ResNet18
+from MyNet_ResNet import ResNet18
 
 # 映射表
 result_cls = ["Good", "Bad"]

@@ -1,5 +1,6 @@
 import torch
-from MyNet import ResNet18
+from MyNet_ResNet import ResNet18
+from MyNet_SEResNet import SEResNet18
 from MyDataSet import MyDataSet
 from torch.utils.data import DataLoader
 
@@ -11,10 +12,17 @@ result_cls = ["Good", "Bad"]
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # 权重存放路径
-weight_path = "D:\\PythonProject\\1DCNN\\checkpoints\\best_model.pt"
+weight_path = "D:\\PythonProject\\1DCNN\\checkpoints\\best_model_ResNet.pt"
 # 调用模型
 model = ResNet18().to(device)
 model.load_state_dict(torch.load(weight_path))
+
+# # 权重存放路径
+# weight_path = "D:\\PythonProject\\1DCNN\\checkpoints\\best_model_SEResNet.pt"
+# # 调用模型
+# model = SEResNet18().to(device)
+# model.load_state_dict(torch.load(weight_path))
+
 
 if __name__ == '__main__':
     # 数据存放路径
