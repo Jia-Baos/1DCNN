@@ -22,7 +22,7 @@ model.load_state_dict(torch.load(weight_path))
 
 if __name__ == '__main__':
     # 数据存放路径
-    data_dir = 'D:\\PythonProject\\1DCNN\\datatest'
+    data_dir = 'D:\\PythonProject\\1DCNN\\datatest\\good-4-14'
 
     # 预测过程
     img_list = os.listdir(data_dir)
@@ -41,7 +41,7 @@ if __name__ == '__main__':
             output = model(x)
             cls_index = torch.argmax(output)
             print(result_cls[cls_index])
-            if cls_index == 1:
+            if cls_index == 0:
                 data_right += 1
             data_full += 1
     print("accur: ", data_right / data_full)

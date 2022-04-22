@@ -32,7 +32,7 @@ class MyDataSet(Dataset):
 
     def __init__(self, dataset_dir, mode="train", trans=None):
         self.data_dir = dataset_dir
-        self.image_dir = os.path.join(dataset_dir, "Images")
+        self.image_dir = os.path.join(dataset_dir, "Images_min_max_normalize")
         self.label_dir = os.path.join(dataset_dir, "Labels")
         self.imagesets_dir = os.path.join(dataset_dir, "ImageSets")
         self.mode = mode

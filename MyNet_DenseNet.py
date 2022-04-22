@@ -119,6 +119,7 @@ class DenseNet(nn.Module):
                 # n = item.kernel_size[0] * item.kernel_size[1] * item.out_channels
                 n = item.kernel_size[0] * item.out_channels
                 item.weight.data.normal_(0, math.sqrt(2. / n))
+                # torch.nn.init.xavier_normal(item.weight, gain=1)
             elif isinstance(item, nn.BatchNorm1d):
                 item.weight.data.fill_(1)
                 item.bias.data.zero_()

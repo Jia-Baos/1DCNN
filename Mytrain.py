@@ -8,6 +8,7 @@ from MyDataSet import MyDataSet
 from torch.optim import lr_scheduler
 from torch.utils.data import DataLoader
 import os
+import math
 import time
 import datetime
 from visdom import Visdom
@@ -33,15 +34,16 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # 调用MyNet模型，将模型数据转到GPU
 # model = ResNet18().to(device)
-model = SEResNet18().to(device)
-# model = DenseNet(Bottleneck, [6, 12, 24, 16], growth_rate=12, num_classes=2, pool_size=7).to(device)
+# model = SEResNet18().to(device)
+model = DenseNet(Bottleneck, [6, 12, 24, 16], growth_rate=12, num_classes=2, pool_size=7).to(device)
 # model.load_state_dict(torch.load("D:\\PythonProject\\1DCNN\\checkpoints\\best_model_old.pt"))
 
 # 定义损失函数
 loss_func = nn.CrossEntropyLoss()
 
 # 定义一个优化器
-optimizer = torch.optim.SGD(model.parameters(), lr=1e-3, momentum=0.9)
+# optimizer = torch.optim.SGD(model.parameters(), lr=1e-3, momentum=0.9)
+optimizer = torch.optim.Adam(model.parameters(), lr=1e-3)
 
 # 学习率每隔十轮，变为原来的0.1
 lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=5, gamma=0.1)
@@ -56,9 +58,10 @@ def train(dataloader, model, loss_func, optimizer):
         x, y = x.to(device), y.to(device)
         output = model(x)
         # output = output.unsqueeze(0)
-        # print(output)
-        # print(y)
+        print(output)
+        print(y)
         cur_loss = loss_func(output, y)
+        # cur_loss = ()
         train_avg_loss = (train_avg_loss * batch + cur_loss.item()) / (batch + 1)
         # pred = torch.argmax(output, dim=1)
 
