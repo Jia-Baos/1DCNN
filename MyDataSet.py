@@ -32,9 +32,9 @@ class MyDataSet(Dataset):
 
     def __init__(self, dataset_dir, mode="train", trans=None):
         self.data_dir = dataset_dir
-        self.image_dir = os.path.join(dataset_dir, "Images_min_max_normalize")
-        self.label_dir = os.path.join(dataset_dir, "Labels")
-        self.imagesets_dir = os.path.join(dataset_dir, "ImageSets")
+        self.image_dir = os.path.join(dataset_dir, "Images_200_min_max_normalize")
+        self.label_dir = os.path.join(dataset_dir, "Labels_200")
+        self.imagesets_dir = os.path.join(dataset_dir, "ImageSets_200")
         self.mode = mode
 
         # img_list存的只是图片的名字

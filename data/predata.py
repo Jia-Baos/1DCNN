@@ -3,7 +3,7 @@ import random
 import xml.etree.ElementTree as ET
 
 classes = ['mask', 'no-mask']  # 根据自己的类别来
-data_dir = r'D:\PythonProject\1DCNN\data'
+data_dir = "D:\\PythonProject\\1DCNN\\data1"
 
 
 # 统一更改图片名称，也可以用其来修改xml文件的名称

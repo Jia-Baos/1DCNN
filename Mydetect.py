@@ -13,7 +13,7 @@ result_cls = ["Good", "Bad"]
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # 权重存放路径
-weight_path = "D:\\PythonProject\\1DCNN\\checkpoints\\best_model_SEResNet.pt"
+weight_path = "D:\\PythonProject\\1DCNN\\checkpoints\\best_model_SEResNet_min_max.pt"
 # 调用模型
 # model = ResNet18().to(device)
 model = SEResNet18().to(device)
@@ -22,7 +22,7 @@ model.load_state_dict(torch.load(weight_path))
 
 if __name__ == '__main__':
     # 数据存放路径
-    data_dir = 'D:\\PythonProject\\1DCNN\\datatest\\good-4-14'
+    data_dir = 'D:\\PythonProject\\1DCNN\\data\\Images_200_min_max_normalize'
 
     # 预测过程
     img_list = os.listdir(data_dir)

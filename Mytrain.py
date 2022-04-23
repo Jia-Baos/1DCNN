@@ -7,6 +7,9 @@ from MyNet_DenseNet import Bottleneck, DenseNet
 from MyDataSet import MyDataSet
 from torch.optim import lr_scheduler
 from torch.utils.data import DataLoader
+
+from Myutils import FocalLoss
+
 import os
 import math
 import time
@@ -34,12 +37,13 @@ device = "cuda" if torch.cuda.is_available() else "cpu"
 
 # 调用MyNet模型，将模型数据转到GPU
 # model = ResNet18().to(device)
-# model = SEResNet18().to(device)
-model = DenseNet(Bottleneck, [6, 12, 24, 16], growth_rate=12, num_classes=2, pool_size=7).to(device)
-# model.load_state_dict(torch.load("D:\\PythonProject\\1DCNN\\checkpoints\\best_model_old.pt"))
+model = SEResNet18().to(device)
+# model = DenseNet(Bottleneck, [6, 12, 24, 16], growth_rate=12, num_classes=2, pool_size=7).to(device)
+model.load_state_dict(torch.load("D:\\PythonProject\\1DCNN\\checkpoints\\best_model_SEResNet_min_max.pt"))
 
 # 定义损失函数
 loss_func = nn.CrossEntropyLoss()
+new_loss_func = FocalLoss()
 
 # 定义一个优化器
 # optimizer = torch.optim.SGD(model.parameters(), lr=1e-3, momentum=0.9)
@@ -61,6 +65,7 @@ def train(dataloader, model, loss_func, optimizer):
         print(output)
         print(y)
         cur_loss = loss_func(output, y)
+        # cur_loss = new_loss_func.forward(output, y)
         # cur_loss = ()
         train_avg_loss = (train_avg_loss * batch + cur_loss.item()) / (batch + 1)
         # pred = torch.argmax(output, dim=1)
@@ -88,6 +93,7 @@ def val(dataloader, model, loss_func):
             output = model(x)
             # output = output.unsqueeze(0)
             cur_loss = loss_func(output, y)
+            # cur_loss = new_loss_func.forward(output, y)
             val_avg_loss = (val_avg_loss * batch + cur_loss.item()) / (batch + 1)
             # pred = torch.argmax(output, dim=1)
             real_cls_index = torch.argmax(y)
@@ -162,5 +168,5 @@ if __name__ == '__main__':
         if val_loss < best_loss:
             best_loss = val_loss
             print("save best model")
-            torch.save(model.state_dict(), 'checkpoints/best_model.pt')
+            torch.save(model.state_dict(), 'checkpoints/best_model_2022_04_23.pt')
     print("The train has done!!!")
