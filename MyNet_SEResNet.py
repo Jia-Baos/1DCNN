@@ -143,6 +143,7 @@ class SEResNet18(nn.Module):
         # print("ready enter fc: ", output.size())
 
         output = self.fc(output)
+        self.output = output
         # print("output of fc: ", output.size())
         return output
 

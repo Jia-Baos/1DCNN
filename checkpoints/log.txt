@@ -1046,3 +1046,1066 @@ Training consumes 2.22 second
 Epoch 99 | avg_loss = 0.137
 Validation consumes 0.20 second
 
+2022-04-25 18:46:08
+======================training epoch 1======================
+2022-04-25 18:47:15
+======================training epoch 1======================
+2022-04-25 18:48:56
+======================training epoch 1======================
+Epoch 0 | avg_loss = 0.391
+Training consumes 2.47 second
+
+======================validate epoch 1======================
+Epoch 0 | avg_loss = 1.545
+Validation consumes 0.36 second
+
+2022-04-25 18:49:00
+======================training epoch 2======================
+Epoch 1 | avg_loss = 0.451
+Training consumes 3.74 second
+
+======================validate epoch 2======================
+Epoch 1 | avg_loss = 0.070
+Validation consumes 0.19 second
+
+2022-04-25 18:49:04
+======================training epoch 3======================
+Epoch 2 | avg_loss = 0.510
+Training consumes 2.28 second
+
+======================validate epoch 3======================
+Epoch 2 | avg_loss = 0.324
+Validation consumes 0.17 second
+
+2022-04-25 18:49:07
+======================training epoch 4======================
+Epoch 3 | avg_loss = 0.157
+Training consumes 2.25 second
+
+======================validate epoch 4======================
+Epoch 3 | avg_loss = 0.068
+Validation consumes 0.17 second
+
+2022-04-25 18:49:10
+======================training epoch 5======================
+Epoch 4 | avg_loss = 0.123
+Training consumes 2.39 second
+
+======================validate epoch 5======================
+Epoch 4 | avg_loss = 0.053
+2022-04-25 18:50:54
+======================training epoch 1======================
+Epoch 0 | avg_loss = 0.668
+Training consumes 2.82 second
+
+======================validate epoch 1======================
+Epoch 0 | avg_loss = 5.733
+Validation consumes 0.22 second
+
+2022-04-25 18:50:57
+======================training epoch 2======================
+2022-04-25 18:51:35
+======================training epoch 1======================
+2022-04-25 19:02:54
+======================training epoch 1======================
+2022-04-25 19:05:23
+======================training epoch 1======================
+2022-04-25 19:09:06
+======================training epoch 1======================
+2022-04-25 19:11:34
+======================training epoch 1======================
+2022-04-25 19:15:55
+======================training epoch 1======================
+2022-04-25 19:28:43
+======================training epoch 1======================
+2022-04-25 19:29:59
+======================training epoch 1======================
+2022-04-25 19:35:20
+======================training epoch 1======================
+2022-04-25 19:44:17
+======================training epoch 1======================
+2022-04-25 19:44:40
+======================training epoch 1======================
+2022-04-25 19:45:53
+======================training epoch 1======================
+2022-04-25 19:47:37
+======================training epoch 1======================
+2022-04-25 21:14:09
+======================training epoch 1======================
+Epoch 0 | avg_loss = 8979371175.768
+Training consumes 2.61 second
+
+======================validate epoch 1======================
+Epoch 0 | avg_loss = -13.962
+Validation consumes 0.23 second
+
+2022-04-25 21:14:12
+======================training epoch 2======================
+Epoch 1 | avg_loss = -1436.462
+Training consumes 3.33 second
+
+======================validate epoch 2======================
+Epoch 1 | avg_loss = -1.628
+Validation consumes 0.30 second
+
+2022-04-25 21:14:16
+======================training epoch 3======================
+Epoch 2 | avg_loss = -7.408
+Training consumes 2.10 second
+
+======================validate epoch 3======================
+Epoch 2 | avg_loss = -1.327
+Validation consumes 0.19 second
+
+2022-04-25 21:14:19
+======================training epoch 4======================
+Epoch 3 | avg_loss = -5.210
+Training consumes 2.31 second
+
+======================validate epoch 4======================
+Epoch 3 | avg_loss = -1.306
+Validation consumes 0.23 second
+
+2022-04-25 21:14:22
+======================training epoch 5======================
+Epoch 4 | avg_loss = -5.440
+Training consumes 2.53 second
+
+======================validate epoch 5======================
+Epoch 4 | avg_loss = -1.314
+Validation consumes 0.19 second
+
+2022-04-25 21:14:25
+======================training epoch 6======================
+Epoch 5 | avg_loss = -5.909
+Training consumes 2.16 second
+
+======================validate epoch 6======================
+Epoch 5 | avg_loss = -1.350
+Validation consumes 0.20 second
+
+2022-04-25 21:14:28
+======================training epoch 7======================
+Epoch 6 | avg_loss = -6.401
+Training consumes 2.20 second
+
+======================validate epoch 7======================
+Epoch 6 | avg_loss = -1.287
+Validation consumes 0.19 second
+
+2022-04-25 21:14:31
+======================training epoch 8======================
+Epoch 7 | avg_loss = -3.960
+Training consumes 2.20 second
+
+======================validate epoch 8======================
+Epoch 7 | avg_loss = -1.324
+Validation consumes 0.19 second
+
+2022-04-25 21:14:34
+======================training epoch 9======================
+Epoch 8 | avg_loss = -6.472
+Training consumes 2.16 second
+
+======================validate epoch 9======================
+Epoch 8 | avg_loss = -1.291
+Validation consumes 0.20 second
+
+2022-04-25 21:14:37
+======================training epoch 10======================
+Epoch 9 | avg_loss = -5.857
+Training consumes 2.20 second
+
+======================validate epoch 10======================
+Epoch 9 | avg_loss = -1.290
+Validation consumes 0.19 second
+
+2022-04-25 21:14:40
+======================training epoch 11======================
+Epoch 10 | avg_loss = -5.692
+Training consumes 2.17 second
+
+======================validate epoch 11======================
+Epoch 10 | avg_loss = -1.295
+Validation consumes 0.19 second
+
+2022-04-25 21:14:43
+======================training epoch 12======================
+Epoch 11 | avg_loss = -5.634
+Training consumes 2.22 second
+
+======================validate epoch 12======================
+Epoch 11 | avg_loss = -1.339
+Validation consumes 0.20 second
+
+2022-04-25 21:14:46
+======================training epoch 13======================
+Epoch 12 | avg_loss = -4.541
+Training consumes 2.34 second
+
+======================validate epoch 13======================
+Epoch 12 | avg_loss = -1.358
+Validation consumes 0.22 second
+
+2022-04-25 21:14:49
+======================training epoch 14======================
+Epoch 13 | avg_loss = -5.501
+Training consumes 2.19 second
+
+======================validate epoch 14======================
+Epoch 13 | avg_loss = -1.319
+Validation consumes 0.19 second
+
+2022-04-25 21:14:52
+======================training epoch 15======================
+Epoch 14 | avg_loss = -5.659
+Training consumes 2.17 second
+
+======================validate epoch 15======================
+Epoch 14 | avg_loss = -1.333
+Validation consumes 0.17 second
+
+2022-04-25 21:14:55
+======================training epoch 16======================
+Epoch 15 | avg_loss = -6.565
+Training consumes 3.38 second
+
+======================validate epoch 16======================
+2022-04-25 21:18:39
+======================training epoch 1======================
+Epoch 0 | avg_loss = -1832166304186521.000
+Training consumes 2.31 second
+
+======================validate epoch 1======================
+Epoch 0 | avg_loss = nan
+Validation consumes 0.19 second
+
+2022-04-25 21:18:42
+======================training epoch 2======================
+Epoch 1 | avg_loss = nan
+Training consumes 2.56 second
+
+======================validate epoch 2======================
+Epoch 1 | avg_loss = nan
+Validation consumes 0.23 second
+
+2022-04-25 21:18:46
+======================training epoch 3======================
+Epoch 2 | avg_loss = nan
+Training consumes 3.09 second
+
+======================validate epoch 3======================
+Epoch 2 | avg_loss = nan
+Validation consumes 0.19 second
+
+2022-04-25 21:18:49
+======================training epoch 4======================
+2022-04-25 21:26:16
+======================training epoch 1======================
+Epoch 0 | avg_loss = -21312995596134661488640.000
+Training consumes 2.36 second
+
+======================validate epoch 1======================
+Epoch 0 | avg_loss = 2.420
+Validation consumes 0.17 second
+
+2022-04-25 21:26:19
+======================training epoch 2======================
+Epoch 1 | avg_loss = -7828011541444114159501312.000
+Training consumes 2.81 second
+
+======================validate epoch 2======================
+Epoch 1 | avg_loss = 2.191
+Validation consumes 0.31 second
+
+2022-04-25 21:26:22
+======================training epoch 3======================
+Epoch 2 | avg_loss = -50787205196714639425011712.000
+Training consumes 3.06 second
+
+======================validate epoch 3======================
+Epoch 2 | avg_loss = 2.076
+Validation consumes 0.20 second
+
+2022-04-25 21:26:26
+======================training epoch 4======================
+2022-04-25 21:26:52
+======================training epoch 1======================
+Epoch 0 | avg_loss = -235348097839832032608256.000
+Training consumes 2.31 second
+
+======================validate epoch 1======================
+Epoch 0 | avg_loss = 1.950
+Validation consumes 0.20 second
+
+2022-04-25 21:26:55
+======================training epoch 2======================
+Epoch 1 | avg_loss = -45672067356141530126936440832.000
+Training consumes 2.93 second
+
+======================validate epoch 2======================
+Epoch 1 | avg_loss = 1.729
+Validation consumes 0.24 second
+
+2022-04-25 21:26:59
+======================training epoch 3======================
+Epoch 2 | avg_loss = -6944525086153923025442963456.000
+Training consumes 2.71 second
+
+======================validate epoch 3======================
+Epoch 2 | avg_loss = 1.512
+Validation consumes 0.17 second
+
+2022-04-25 21:27:02
+======================training epoch 4======================
+Epoch 3 | avg_loss = -6638710628243353659829649408.000
+Training consumes 2.44 second
+
+======================validate epoch 4======================
+Epoch 3 | avg_loss = 1.592
+Validation consumes 0.16 second
+
+2022-04-25 21:27:05
+======================training epoch 5======================
+Epoch 4 | avg_loss = -2083437633196689973202386944.000
+Training consumes 2.41 second
+
+======================validate epoch 5======================
+Epoch 4 | avg_loss = 1.701
+Validation consumes 0.16 second
+
+2022-04-25 21:27:09
+======================training epoch 6======================
+Epoch 5 | avg_loss = -3554302686759946375219118080.000
+Training consumes 2.41 second
+
+======================validate epoch 6======================
+Epoch 5 | avg_loss = 1.907
+Validation consumes 0.19 second
+
+2022-04-25 21:27:12
+======================training epoch 7======================
+Epoch 6 | avg_loss = -26058565151653851312255139840.000
+Training consumes 2.39 second
+
+======================validate epoch 7======================
+Epoch 6 | avg_loss = 1.623
+Validation consumes 0.20 second
+
+2022-04-25 21:27:15
+======================training epoch 8======================
+Epoch 7 | avg_loss = -8218815121001724875112448.000
+Training consumes 2.43 second
+
+======================validate epoch 8======================
+Epoch 7 | avg_loss = 1.597
+Validation consumes 0.19 second
+
+2022-04-25 21:27:18
+======================training epoch 9======================
+Epoch 8 | avg_loss = -916414875818829470930829312.000
+Training consumes 2.45 second
+
+======================validate epoch 9======================
+Epoch 8 | avg_loss = 1.690
+Validation consumes 0.22 second
+
+2022-04-25 21:27:21
+======================training epoch 10======================
+Epoch 9 | avg_loss = -39372293752591055906697904128.000
+Training consumes 2.51 second
+
+======================validate epoch 10======================
+Epoch 9 | avg_loss = 1.546
+Validation consumes 0.20 second
+
+2022-04-25 21:27:24
+======================training epoch 11======================
+Epoch 10 | avg_loss = -697502869221758622815485952.000
+Training consumes 3.67 second
+
+======================validate epoch 11======================
+Epoch 10 | avg_loss = 1.823
+Validation consumes 0.19 second
+
+2022-04-25 21:27:29
+======================training epoch 12======================
+Epoch 11 | avg_loss = -2857970264555483737121357824.000
+Training consumes 2.34 second
+
+======================validate epoch 12======================
+Epoch 11 | avg_loss = 1.677
+Validation consumes 0.20 second
+
+2022-04-25 21:27:32
+======================training epoch 13======================
+Epoch 12 | avg_loss = -4579284882015290910572544.000
+Training consumes 2.41 second
+
+======================validate epoch 13======================
+Epoch 12 | avg_loss = 1.704
+Validation consumes 0.19 second
+
+2022-04-25 21:27:35
+======================training epoch 14======================
+Epoch 13 | avg_loss = -35752729059326442549027012608.000
+Training consumes 2.50 second
+
+======================validate epoch 14======================
+Epoch 13 | avg_loss = 1.652
+Validation consumes 0.16 second
+
+2022-04-25 21:27:38
+======================training epoch 15======================
+Epoch 14 | avg_loss = -904917348828049628463104.000
+Training consumes 2.45 second
+
+======================validate epoch 15======================
+Epoch 14 | avg_loss = 1.496
+Validation consumes 0.21 second
+
+2022-04-25 21:27:41
+======================training epoch 16======================
+Epoch 15 | avg_loss = -90964781606160474365231104.000
+Training consumes 2.36 second
+
+======================validate epoch 16======================
+Epoch 15 | avg_loss = 1.912
+Validation consumes 0.20 second
+
+2022-04-25 21:27:44
+======================training epoch 17======================
+Epoch 16 | avg_loss = -1663913376323400223961382912.000
+Training consumes 2.44 second
+
+======================validate epoch 17======================
+Epoch 16 | avg_loss = 1.856
+Validation consumes 0.19 second
+
+2022-04-25 21:27:48
+======================training epoch 18======================
+Epoch 17 | avg_loss = -237739108858165310802362368.000
+Training consumes 2.55 second
+
+======================validate epoch 18======================
+Epoch 17 | avg_loss = 1.824
+Validation consumes 0.30 second
+
+2022-04-25 21:27:51
+======================training epoch 19======================
+Epoch 18 | avg_loss = -382672782723088565143601152.000
+Training consumes 3.22 second
+
+======================validate epoch 19======================
+Epoch 18 | avg_loss = 1.965
+Validation consumes 0.36 second
+
+2022-04-25 21:27:55
+======================training epoch 20======================
+Epoch 19 | avg_loss = -35219031391946484523991040.000
+Training consumes 2.96 second
+
+======================validate epoch 20======================
+Epoch 19 | avg_loss = 1.844
+Validation consumes 0.19 second
+
+2022-04-25 21:27:59
+======================training epoch 21======================
+Epoch 20 | avg_loss = -2190003544845884065304281088.000
+Training consumes 2.42 second
+
+======================validate epoch 21======================
+Epoch 20 | avg_loss = 1.808
+Validation consumes 0.19 second
+
+2022-04-25 21:28:02
+======================training epoch 22======================
+2022-04-25 21:35:35
+======================training epoch 1======================
+Epoch 0 | avg_loss = -2217472976855857205675556864.000
+Training consumes 2.93 second
+
+======================validate epoch 1======================
+Epoch 0 | avg_loss = 0.769
+Validation consumes 0.20 second
+
+2022-04-25 21:35:39
+======================training epoch 2======================
+Epoch 1 | avg_loss = -4228856170491327746335047680.000
+Training consumes 2.53 second
+
+======================validate epoch 2======================
+Epoch 1 | avg_loss = 0.370
+Validation consumes 0.20 second
+
+2022-04-25 21:35:42
+======================training epoch 3======================
+Epoch 2 | avg_loss = -395365445001.019
+Training consumes 3.80 second
+
+======================validate epoch 3======================
+Epoch 2 | avg_loss = 0.220
+Validation consumes 0.17 second
+
+2022-04-25 21:35:47
+======================training epoch 4======================
+Epoch 3 | avg_loss = -6606611202727135674082787328.000
+Training consumes 2.39 second
+
+======================validate epoch 4======================
+Epoch 3 | avg_loss = 0.193
+Validation consumes 0.17 second
+
+2022-04-25 21:35:50
+======================training epoch 5======================
+Epoch 4 | avg_loss = -5032909907165855839185534976.000
+Training consumes 2.66 second
+
+======================validate epoch 5======================
+Epoch 4 | avg_loss = 0.185
+Validation consumes 0.22 second
+
+2022-04-25 21:35:53
+======================training epoch 6======================
+Epoch 5 | avg_loss = -5402242747960448020278935552.000
+Training consumes 2.72 second
+
+======================validate epoch 6======================
+Epoch 5 | avg_loss = 0.159
+Validation consumes 0.19 second
+
+2022-04-25 21:35:57
+======================training epoch 7======================
+2022-04-25 21:42:40
+======================training epoch 1======================
+Epoch 0 | avg_loss = 0.337
+Training consumes 2.25 second
+
+======================validate epoch 1======================
+Epoch 0 | avg_loss = 0.021
+Validation consumes 0.19 second
+
+2022-04-25 21:42:43
+======================training epoch 2======================
+Epoch 1 | avg_loss = 0.148
+Training consumes 2.70 second
+
+======================validate epoch 2======================
+Epoch 1 | avg_loss = 0.032
+Validation consumes 0.36 second
+
+2022-04-25 21:42:47
+======================training epoch 3======================
+Epoch 2 | avg_loss = 0.140
+Training consumes 2.64 second
+
+======================validate epoch 3======================
+Epoch 2 | avg_loss = 0.013
+Validation consumes 0.22 second
+
+2022-04-25 21:42:50
+======================training epoch 4======================
+Epoch 3 | avg_loss = 0.035
+Training consumes 2.17 second
+
+======================validate epoch 4======================
+Epoch 3 | avg_loss = 0.010
+Validation consumes 0.20 second
+
+2022-04-25 21:42:53
+======================training epoch 5======================
+Epoch 4 | avg_loss = 0.075
+Training consumes 2.22 second
+
+======================validate epoch 5======================
+Epoch 4 | avg_loss = 0.023
+Validation consumes 0.22 second
+
+2022-04-25 21:42:56
+======================training epoch 6======================
+Epoch 5 | avg_loss = 0.020
+Training consumes 2.20 second
+
+======================validate epoch 6======================
+Epoch 5 | avg_loss = 0.014
+Validation consumes 0.19 second
+
+2022-04-25 21:42:59
+======================training epoch 7======================
+Epoch 6 | avg_loss = 0.023
+Training consumes 2.12 second
+
+======================validate epoch 7======================
+Epoch 6 | avg_loss = 0.011
+Validation consumes 0.17 second
+
+2022-04-25 21:43:02
+======================training epoch 8======================
+Epoch 7 | avg_loss = 0.016
+Training consumes 2.17 second
+
+======================validate epoch 8======================
+Epoch 7 | avg_loss = 0.004
+Validation consumes 0.20 second
+
+2022-04-25 21:43:05
+======================training epoch 9======================
+Epoch 8 | avg_loss = 0.010
+Training consumes 2.17 second
+
+======================validate epoch 9======================
+Epoch 8 | avg_loss = 0.003
+Validation consumes 0.19 second
+
+2022-04-25 21:43:07
+======================training epoch 10======================
+Epoch 9 | avg_loss = 0.009
+Training consumes 2.19 second
+
+======================validate epoch 10======================
+Epoch 9 | avg_loss = 0.003
+Validation consumes 0.20 second
+
+2022-04-25 21:43:10
+======================training epoch 11======================
+Epoch 10 | avg_loss = 0.005
+Training consumes 2.12 second
+
+======================validate epoch 11======================
+Epoch 10 | avg_loss = 0.003
+Validation consumes 0.19 second
+
+2022-04-25 21:43:13
+======================training epoch 12======================
+Epoch 11 | avg_loss = 0.021
+Training consumes 2.14 second
+
+======================validate epoch 12======================
+Epoch 11 | avg_loss = 0.003
+Validation consumes 0.19 second
+
+2022-04-25 21:43:16
+======================training epoch 13======================
+Epoch 12 | avg_loss = 0.026
+Training consumes 2.08 second
+
+======================validate epoch 13======================
+Epoch 12 | avg_loss = 0.003
+Validation consumes 0.20 second
+
+2022-04-25 21:43:19
+======================training epoch 14======================
+Epoch 13 | avg_loss = 0.017
+Training consumes 2.16 second
+
+======================validate epoch 14======================
+Epoch 13 | avg_loss = 0.003
+Validation consumes 0.20 second
+
+2022-04-25 21:43:22
+======================training epoch 15======================
+Epoch 14 | avg_loss = 0.006
+Training consumes 2.06 second
+
+======================validate epoch 15======================
+Epoch 14 | avg_loss = 0.003
+Validation consumes 0.16 second
+
+2022-04-25 21:43:25
+======================training epoch 16======================
+Epoch 15 | avg_loss = 0.017
+Training consumes 2.33 second
+
+======================validate epoch 16======================
+Epoch 15 | avg_loss = 0.004
+Validation consumes 0.17 second
+
+2022-04-25 21:43:28
+======================training epoch 17======================
+Epoch 16 | avg_loss = 0.003
+Training consumes 2.22 second
+
+======================validate epoch 17======================
+Epoch 16 | avg_loss = 0.003
+Validation consumes 0.20 second
+
+2022-04-25 21:43:31
+======================training epoch 18======================
+Epoch 17 | avg_loss = 0.018
+Training consumes 3.11 second
+
+======================validate epoch 18======================
+Epoch 17 | avg_loss = 0.003
+Validation consumes 0.23 second
+
+2022-04-25 21:43:34
+======================training epoch 19======================
+Epoch 18 | avg_loss = 0.005
+Training consumes 2.31 second
+
+======================validate epoch 19======================
+Epoch 18 | avg_loss = 0.003
+Validation consumes 0.20 second
+
+2022-04-25 21:43:38
+======================training epoch 20======================
+Epoch 19 | avg_loss = 0.013
+Training consumes 2.11 second
+
+======================validate epoch 20======================
+Epoch 19 | avg_loss = 0.003
+Validation consumes 0.22 second
+
+2022-04-25 21:43:40
+======================training epoch 21======================
+Epoch 20 | avg_loss = 0.012
+Training consumes 2.81 second
+
+======================validate epoch 21======================
+Epoch 20 | avg_loss = 0.003
+Validation consumes 0.20 second
+
+2022-04-25 21:43:44
+======================training epoch 22======================
+Epoch 21 | avg_loss = 0.019
+Training consumes 2.11 second
+
+======================validate epoch 22======================
+Epoch 21 | avg_loss = 0.003
+Validation consumes 0.20 second
+
+2022-04-25 21:43:47
+======================training epoch 23======================
+Epoch 22 | avg_loss = 0.037
+Training consumes 2.16 second
+
+======================validate epoch 23======================
+Epoch 22 | avg_loss = 0.003
+Validation consumes 0.17 second
+
+2022-04-25 21:43:50
+======================training epoch 24======================
+Epoch 23 | avg_loss = 0.009
+Training consumes 2.11 second
+
+======================validate epoch 24======================
+Epoch 23 | avg_loss = 0.002
+Validation consumes 0.20 second
+
+2022-04-25 21:43:52
+======================training epoch 25======================
+Epoch 24 | avg_loss = 0.012
+Training consumes 2.23 second
+
+======================validate epoch 25======================
+Epoch 24 | avg_loss = 0.003
+Validation consumes 0.17 second
+
+2022-04-25 21:43:55
+======================training epoch 26======================
+Epoch 25 | avg_loss = 0.024
+Training consumes 2.16 second
+
+======================validate epoch 26======================
+Epoch 25 | avg_loss = 0.003
+Validation consumes 0.19 second
+
+2022-04-25 21:43:58
+======================training epoch 27======================
+Epoch 26 | avg_loss = 0.008
+Training consumes 2.06 second
+
+======================validate epoch 27======================
+Epoch 26 | avg_loss = 0.003
+Validation consumes 0.19 second
+
+2022-04-25 21:44:01
+======================training epoch 28======================
+Epoch 27 | avg_loss = 0.013
+Training consumes 2.06 second
+
+======================validate epoch 28======================
+Epoch 27 | avg_loss = 0.003
+Validation consumes 0.17 second
+
+2022-04-25 21:44:04
+======================training epoch 29======================
+Epoch 28 | avg_loss = 0.019
+Training consumes 2.14 second
+
+======================validate epoch 29======================
+Epoch 28 | avg_loss = 0.003
+Validation consumes 0.19 second
+
+2022-04-25 21:44:07
+======================training epoch 30======================
+Epoch 29 | avg_loss = 0.009
+Training consumes 2.14 second
+
+======================validate epoch 30======================
+Epoch 29 | avg_loss = 0.003
+Validation consumes 0.17 second
+
+2022-04-25 21:44:10
+======================training epoch 31======================
+Epoch 30 | avg_loss = 0.008
+Training consumes 2.08 second
+
+======================validate epoch 31======================
+Epoch 30 | avg_loss = 0.004
+Validation consumes 0.19 second
+
+2022-04-25 21:44:12
+======================training epoch 32======================
+Epoch 31 | avg_loss = 0.006
+Training consumes 2.17 second
+
+======================validate epoch 32======================
+Epoch 31 | avg_loss = 0.003
+Validation consumes 0.19 second
+
+2022-04-25 21:44:15
+======================training epoch 33======================
+Epoch 32 | avg_loss = 0.020
+Training consumes 2.17 second
+
+======================validate epoch 33======================
+Epoch 32 | avg_loss = 0.003
+Validation consumes 0.17 second
+
+2022-04-25 21:44:18
+======================training epoch 34======================
+Epoch 33 | avg_loss = 0.006
+Training consumes 2.14 second
+
+======================validate epoch 34======================
+Epoch 33 | avg_loss = 0.003
+Validation consumes 0.19 second
+
+2022-04-25 21:44:21
+======================training epoch 35======================
+Epoch 34 | avg_loss = 0.013
+Training consumes 2.17 second
+
+======================validate epoch 35======================
+Epoch 34 | avg_loss = 0.003
+Validation consumes 0.19 second
+
+2022-04-25 21:44:24
+======================training epoch 36======================
+Epoch 35 | avg_loss = 0.014
+Training consumes 2.14 second
+
+======================validate epoch 36======================
+Epoch 35 | avg_loss = 0.003
+Validation consumes 0.19 second
+
+2022-04-25 21:44:27
+======================training epoch 37======================
+Epoch 36 | avg_loss = 0.012
+Training consumes 2.16 second
+
+======================validate epoch 37======================
+Epoch 36 | avg_loss = 0.003
+Validation consumes 0.19 second
+
+2022-04-25 21:44:30
+======================training epoch 38======================
+Epoch 37 | avg_loss = 0.012
+Training consumes 2.12 second
+
+======================validate epoch 38======================
+Epoch 37 | avg_loss = 0.002
+Validation consumes 0.17 second
+
+2022-04-25 21:44:32
+======================training epoch 39======================
+Epoch 38 | avg_loss = 0.009
+Training consumes 2.11 second
+
+======================validate epoch 39======================
+Epoch 38 | avg_loss = 0.003
+Validation consumes 0.17 second
+
+2022-04-25 21:44:35
+======================training epoch 40======================
+Epoch 39 | avg_loss = 0.007
+Training consumes 2.14 second
+
+======================validate epoch 40======================
+Epoch 39 | avg_loss = 0.003
+Validation consumes 0.19 second
+
+2022-04-25 21:44:38
+======================training epoch 41======================
+Epoch 40 | avg_loss = 0.010
+Training consumes 2.16 second
+
+======================validate epoch 41======================
+Epoch 40 | avg_loss = 0.003
+Validation consumes 0.17 second
+
+2022-04-25 21:44:41
+======================training epoch 42======================
+Epoch 41 | avg_loss = 0.006
+Training consumes 2.08 second
+
+======================validate epoch 42======================
+Epoch 41 | avg_loss = 0.003
+Validation consumes 0.17 second
+
+2022-04-25 21:44:44
+======================training epoch 43======================
+Epoch 42 | avg_loss = 0.008
+Training consumes 2.16 second
+
+======================validate epoch 43======================
+Epoch 42 | avg_loss = 0.003
+Validation consumes 0.19 second
+
+2022-04-25 21:44:47
+======================training epoch 44======================
+Epoch 43 | avg_loss = 0.011
+Training consumes 2.09 second
+
+======================validate epoch 44======================
+Epoch 43 | avg_loss = 0.003
+Validation consumes 0.17 second
+
+2022-04-25 21:44:49
+======================training epoch 45======================
+Epoch 44 | avg_loss = 0.006
+Training consumes 2.11 second
+
+======================validate epoch 45======================
+Epoch 44 | avg_loss = 0.003
+Validation consumes 0.17 second
+
+2022-04-25 21:44:52
+======================training epoch 46======================
+Epoch 45 | avg_loss = 0.007
+Training consumes 2.16 second
+
+======================validate epoch 46======================
+Epoch 45 | avg_loss = 0.003
+Validation consumes 0.19 second
+
+2022-04-25 21:44:55
+======================training epoch 47======================
+Epoch 46 | avg_loss = 0.005
+Training consumes 2.14 second
+
+======================validate epoch 47======================
+Epoch 46 | avg_loss = 0.003
+Validation consumes 0.19 second
+
+2022-04-25 21:44:58
+======================training epoch 48======================
+Epoch 47 | avg_loss = 0.013
+Training consumes 2.14 second
+
+======================validate epoch 48======================
+Epoch 47 | avg_loss = 0.003
+Validation consumes 0.19 second
+
+2022-04-25 21:45:01
+======================training epoch 49======================
+Epoch 48 | avg_loss = 0.009
+Training consumes 2.17 second
+
+======================validate epoch 49======================
+Epoch 48 | avg_loss = 0.003
+Validation consumes 0.19 second
+
+2022-04-25 21:45:04
+======================training epoch 50======================
+Epoch 49 | avg_loss = 0.019
+Training consumes 2.14 second
+
+======================validate epoch 50======================
+Epoch 49 | avg_loss = 0.003
+Validation consumes 0.16 second
+
+2022-04-25 21:45:06
+======================training epoch 51======================
+Epoch 50 | avg_loss = 0.005
+Training consumes 2.08 second
+
+======================validate epoch 51======================
+Epoch 50 | avg_loss = 0.003
+Validation consumes 0.19 second
+
+2022-04-25 21:45:09
+======================training epoch 52======================
+Epoch 51 | avg_loss = 0.010
+Training consumes 2.12 second
+
+======================validate epoch 52======================
+Epoch 51 | avg_loss = 0.003
+Validation consumes 0.17 second
+
+2022-04-25 21:45:12
+======================training epoch 53======================
+Epoch 52 | avg_loss = 0.017
+Training consumes 2.11 second
+
+======================validate epoch 53======================
+Epoch 52 | avg_loss = 0.003
+Validation consumes 0.19 second
+
+2022-04-25 21:45:15
+======================training epoch 54======================
+Epoch 53 | avg_loss = 0.009
+Training consumes 2.16 second
+
+======================validate epoch 54======================
+Epoch 53 | avg_loss = 0.003
+Validation consumes 0.19 second
+
+2022-04-25 21:45:18
+======================training epoch 55======================
+Epoch 54 | avg_loss = 0.008
+Training consumes 2.14 second
+
+======================validate epoch 55======================
+Epoch 54 | avg_loss = 0.003
+Validation consumes 0.17 second
+
+2022-04-25 21:45:21
+======================training epoch 56======================
+Epoch 55 | avg_loss = 0.008
+Training consumes 2.26 second
+
+======================validate epoch 56======================
+Epoch 55 | avg_loss = 0.003
+Validation consumes 0.17 second
+
+2022-04-25 21:45:24
+======================training epoch 57======================
+Epoch 56 | avg_loss = 0.006
+Training consumes 2.21 second
+
+======================validate epoch 57======================
+Epoch 56 | avg_loss = 0.003
+Validation consumes 0.17 second
+
+2022-04-25 21:45:26
+======================training epoch 58======================
+Epoch 57 | avg_loss = 0.007
+Training consumes 2.84 second
+
+======================validate epoch 58======================
+Epoch 57 | avg_loss = 0.003
+Validation consumes 0.26 second
+
+2022-04-25 21:45:30
+======================training epoch 59======================
+Epoch 58 | avg_loss = 0.016
+Training consumes 3.23 second
+
+======================validate epoch 59======================
+Epoch 58 | avg_loss = 0.004
+Validation consumes 0.50 second
+
+2022-04-25 21:45:34
+======================training epoch 60======================

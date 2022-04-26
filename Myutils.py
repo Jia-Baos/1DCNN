@@ -1,5 +1,7 @@
 import torch
 from torch import nn
+
+
 # 此文件负责一些必须函数的实现
 # 例如：数据的预处理、loss的设计
 
@@ -11,21 +13,18 @@ class FocalLoss(nn.Module):
         self.gama = gama
 
     def forward(self, preds, labels):
-        tensor_temp1 = torch.zeros(preds.shape[0], dtype=torch.float)
-        tensor_temp2 = torch.zeros(preds.shape[0], dtype=torch.float)
+        loss_item = 0.0
+        preds_exp = torch.exp(preds)
+        preds_exp_sum = torch.sum(preds_exp, dim=1)
+        real_class_index = torch.argmax(labels, dim=1)
+        real_class_index = torch.unsqueeze(real_class_index, dim=1)
+        real_class_probability = preds_exp.gather(dim=1, index=real_class_index)
+        preds_exp_sum = torch.unsqueeze(preds_exp_sum, dim=1)
+        temp = real_class_probability / preds_exp_sum
+        loss = -1 * self.alpha * torch.pow((1 - temp), self.gama) * torch.log(temp)
 
-        for i in range(preds.shape[0]):
-            for j in range(preds.shape[1]):
-                if labels[i][j] == 1:
-                    tensor_temp2[i] = -preds[i][j]
-                tensor_temp1[i] += torch.exp(preds[i][j])
-            tensor_temp1[i] = self.alpha * torch.pow((1 - (torch.exp(-tensor_temp2[i]) / tensor_temp1[i])), self.gama) * (
-                                      tensor_temp2[i] + torch.log(tensor_temp1[i]))
-        loss = 0.0
-        for k in range(tensor_temp1.shape[0]):
-            loss = (loss * k + tensor_temp1[k]) / (k + 1)
-
-        return loss
+        loss_item = torch.sum(loss)
+        return loss_item
 
 
 if __name__ == '__main__':
@@ -33,15 +32,18 @@ if __name__ == '__main__':
     tensor1 = torch.tensor([[0.3669, 0.6331],
                             [0.2455, 0.7545],
                             [0.3984, 0.6016],
-                            [0.2782, 0.7218]], dtype=torch.float)
+                            [0.2782, 0.7218]], dtype=torch.float, requires_grad=True)
 
     tensor2 = torch.tensor([[1., 0.],
                             [0., 1.],
                             [1., 0.],
-                            [1., 0.]], dtype=torch.float)
+                            [1., 0.]], dtype=torch.float, requires_grad=True)
 
     loss = loss_func.forward(tensor1, tensor2)
-    print(loss)
+    print("focal loss: ", loss)
+    loss.backward()
+    print("focal loss's grad: ", tensor1.grad)
+    print("focal loss's grad: ", tensor2.grad)
 
     new_loss_func = nn.CrossEntropyLoss()
     new_loss = new_loss_func(tensor1, tensor2)
